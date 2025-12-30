@@ -26,7 +26,7 @@ resource "linode_instance" "gateway" {
   type = "g6-nanode-1"
 
   image     = "linode/ubuntu24.04"
-  root_pass = var.root_pass
+  root_pass = var.instance_default_root_pass
 
   authorized_keys = [
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBKaBsW0ah8wVD8qMmKmlw9yBtoLNVzO88l6StYoA/T1"

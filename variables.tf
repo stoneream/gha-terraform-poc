@@ -3,7 +3,7 @@ variable "linode_pat" {
   sensitive = true
 }
 
-variable "root_pass" {
+variable "instance_default_root_pass" {
   type        = string
   sensitive   = true
   description = "Default root password for instances"
