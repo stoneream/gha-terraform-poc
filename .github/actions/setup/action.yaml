@@ -1,0 +1,16 @@
+name: Setup
+description: Checkout and install Terraform
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/checkout@v4
+
+    - name: Read Terraform version
+      id: tf_version
+      run: echo "version=$(cat .terraform-version)" >> $GITHUB_OUTPUT
+      shell: bash
+
+    - name: Install Terraform
+      uses: hashicorp/setup-terraform@v3
+      with:
+        terraform_version: ${{ steps.tf_version.outputs.version }}
