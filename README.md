@@ -8,4 +8,6 @@
 ```bash
 tfenv install
 tfenv use
+
+terraform init --backend=false
 ```
