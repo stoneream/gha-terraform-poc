@@ -1,0 +1,24 @@
+# This file is maintained automatically by "terraform init".
+# Manual edits may be lost in future updates.
+
+provider "registry.terraform.io/linode/linode" {
+  version     = "3.7.0"
+  constraints = "3.7.0"
+  hashes = [
+    "h1:CWDpQG5eHyiV50h49YkW3hEhQTtnEy5HjhAbX+GBbek=",
+    "zh:07c68cbde99d84ea057a37cf1097857189c8fdb039a2c67a02ea177d88b59e76",
+    "zh:1bc4f421bd05589d2ee1a414a87aba44941335048d43d9b2d13154b4dda733ff",
+    "zh:1f52d0681156ef8418361d63e7617b71d5e43a57280c350fb80724cf645c5763",
+    "zh:239e2880b0585ee65866bf2b4cb87cedee930da2bf33070dc91c499eccbb6d93",
+    "zh:30059d180bb6e288fbe002110bfbd2cd81bf832724411923d46d08bef0bfd661",
+    "zh:483d276382a51b1d3f4b118f75e7773c1c3bc7383d37312a0836f34b32111bb5",
+    "zh:4a05168561ed0fec87530e92863a514647f538a0998a66cb0a69755f095be067",
+    "zh:5f66c03a1962a483a9236ed15479d87993f545f5c8cfaf1852caaa8059bb3bfb",
+    "zh:b43db601c1695a63370cabc42855450940794d39726fa46e08685a0be812d4cb",
+    "zh:bb0e94cf2373630689351d95d2c84dcadf5310c4c409869f187bb70fd35add1d",
+    "zh:c84779efe5815a44d9b63634b3548969de3444e3d2b302c42267d47e40011d5b",
+    "zh:ede72cc0e565af2d21ae947d4d7b2034618ff41040e1241f91d053815461527f",
+    "zh:f171765bbca39188edb6b2cd1a5c77b11e7f48e7160c511d90acd60eea82d06b",
+    "zh:fb7e9e708bbab38f1140df270a59efa7610ba3413ba3872326b6ed2ae5dd76aa",
+  ]
+}

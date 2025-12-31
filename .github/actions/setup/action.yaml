@@ -1,10 +1,15 @@
 name: Setup
-description: Checkout and install Terraform
+description: |
+  Setup and initialize Terraform
+
+  Required environment variables:
+  - AWS_ACCESS_KEY_ID: AWS access key for S3 backend
+  - AWS_SECRET_ACCESS_KEY: AWS secret key for S3 backend  
+  - AWS_DEFAULT_REGION: AWS region for S3 backend
+  - LINODE_TOKEN: Linode API token for provider authentication
 runs:
   using: "composite"
   steps:
-    - uses: actions/checkout@v4
-
     - name: Read Terraform version
       id: tf_version
       run: echo "version=$(cat .terraform-version)" >> $GITHUB_OUTPUT
@@ -14,3 +19,7 @@ runs:
       uses: hashicorp/setup-terraform@v3
       with:
         terraform_version: ${{ steps.tf_version.outputs.version }}
+
+    - name: Terraform Init
+      run: terraform init
+      shell: bash
