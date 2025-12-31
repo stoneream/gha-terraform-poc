@@ -21,7 +21,7 @@ jobs:
     name: Terraform Format
     runs-on: ubuntu-latest
     steps:
-      - uses: ./github/actions/setup
+      - uses: ././github/actions/setup
       - run: terraform fmt -check
 
   lint:
