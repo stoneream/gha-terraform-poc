@@ -1,6 +1,12 @@
 name: Terraform Plan
 
 on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "*.tf"
+      - "*.tfvars"
+      - ".terraform.lock.hcl"
   workflow_dispatch:
 
 jobs:
