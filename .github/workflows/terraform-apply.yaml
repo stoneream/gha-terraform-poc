@@ -17,6 +17,7 @@ jobs:
     name: Terraform Format
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/setup
       - run: terraform fmt -check
 
@@ -24,6 +25,7 @@ jobs:
     name: TFLint
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/setup
       - name: Setup TFLint
         uses: terraform-linters/setup-tflint@v6
@@ -38,6 +40,7 @@ jobs:
     name: Terraform Validate
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/setup
       - name: Terraform Validate
         run: terraform validate
@@ -55,5 +58,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: pre-checks
     steps:
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/setup
       - run: terraform apply -auto-approve

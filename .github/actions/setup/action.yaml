@@ -1,10 +1,8 @@
 name: Setup
-description: Checkout and install Terraform
+description: Setup Terraform
 runs:
   using: "composite"
   steps:
-    - uses: actions/checkout@v4
-
     - name: Read Terraform version
       id: tf_version
       run: echo "version=$(cat .terraform-version)" >> $GITHUB_OUTPUT
