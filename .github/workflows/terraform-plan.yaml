@@ -21,14 +21,14 @@ jobs:
     name: Terraform Format
     runs-on: ubuntu-latest
     steps:
-      - uses: ././github/actions/setup
+      - uses: ./.github/actions/setup
       - run: terraform fmt -check
 
   lint:
     name: TFLint
     runs-on: ubuntu-latest
     steps:
-      - uses: ./github/actions/setup
+      - uses: ./.github/actions/setup
       - name: Setup TFLint
         uses: terraform-linters/setup-tflint@v6
         with:
@@ -42,7 +42,7 @@ jobs:
     name: Terraform Validate
     runs-on: ubuntu-latest
     steps:
-      - uses: ./github/actions/setup
+      - uses: ./.github/actions/setup
       - name: Terraform Validate
         run: terraform validate
 
@@ -50,7 +50,7 @@ jobs:
     name: Terraform Plan
     runs-on: ubuntu-latest
     steps:
-      - uses: ./github/actions/setup
+      - uses: ./.github/actions/setup
       - run: terraform plan
 
   all-checks:
