@@ -28,8 +28,19 @@ jobs:
           tfenv install
           tfenv use
 
+      - name: Setup TFLint
+        uses: terraform-linters/setup-tflint@v6
+        with:
+          tflint_version: v0.52.0
+          cache: true
+
       - name: Terraform Format Check
         run: terraform fmt -check
+
+      - name: TFLint Check
+        run: |
+          tflint --init
+          tflint
 
       - name: Terraform Init
         run: terraform init

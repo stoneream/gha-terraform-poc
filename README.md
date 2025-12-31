@@ -1,6 +1,7 @@
 ## required
 
 - https://github.com/tfutils/tfenv
+- https://github.com/terraform-linters/tflint
 
 ## development
 
