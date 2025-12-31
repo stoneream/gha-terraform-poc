@@ -49,10 +49,4 @@ jobs:
         run: terraform validate
 
       - name: Terraform Plan
-        run: terraform plan -out=tfplan.binary
-
-      - name: Upload Plan
-        uses: actions/upload-artifact@v6
-        with:
-          name: tfplan
-          path: tfplan.binary
+        run: terraform plan
