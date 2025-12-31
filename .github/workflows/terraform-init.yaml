@@ -11,7 +11,7 @@ jobs:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_DEFAULT_REGION: ap-northeast-1
-      TF_VAR_linode_pat: ${{ secrets.LINODE_PAT }}
+      LINODE_TOKEN: ${{ secrets.LINODE_PAT }}
       TF_VAR_instance_default_root_pass: ${{ secrets.INSTANCE_DEFAULT_ROOT_PASSWORD }}
 
     steps:
