@@ -3,10 +3,6 @@ name: Review
 on:
   pull_request:
     branches: [main]
-    paths:
-      - "*.tf"
-      - "*.tfvars"
-      - ".terraform.lock.hcl"
   workflow_dispatch:
 
 env:
